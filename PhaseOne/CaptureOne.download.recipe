@@ -5,27 +5,26 @@
 	<key>Description</key>
 	<string>Downloads the current release version of Capture One.
 
-Note major version upgrades of Capture One are generally paid upgrades, however Phase One's update URL doesn't stop at major version boundaries (e.g. the update URL for Capture One 7 offers a download of Capture One 9) and new major versions of Capture One are paid updates.
+NOTES:
 
-In an attempt to avoid accidentally downloading (and subsequently importing) Capture One updates that require a paid update, we restrict to an ACTUAL_VERSION.  When Phase One releases a new major version, this recipe will break until ACTUAL_VERSION are updated (either via override or by updating this recipe).
-
-Due to Phase One's decision to go with different versions for the software itself and marketing (e.g. Capture One version 13 is marketed as version 20), this recipe also has a MARKETING_VERSION variable to account for the discrepancy.</string>
+- Due to Phase One's decision to go with different versions for the software itself and marketing (e.g. Capture One version 13 is marketed as version 20), this recipe also has a MARKETING_VERSION variable to account for the discrepancy.
+- Major version upgrades of Capture One perpetual licenses are generally paid upgrades, however Phase One's update URL doesn't stop at major version boundaries (e.g. the update URL for Capture One 7 offers a download of Capture One 9) and new major versions of Capture One are paid updates.  In an attempt to avoid accidentally downloading (and subsequently importing) Capture One updates that require a paid update, we restrict to an ACTUAL_VERSION and a corresponding MARKETING_VERSION.  When Phase One releases a new major version, this recipe will break until ACTUAL_VERSION and MARKETING_VERSION are updated (either via override or by updating this recipe).</string>
 	<key>Identifier</key>
 	<string>com.github.foigus.download.CaptureOne</string>
 	<key>Input</key>
 	<dict>
 		<key>ACTUAL_VERSION</key>
-		<string>13</string>
+		<string>14</string>
 		<key>MARKETING_VERSION</key>
-		<string>20</string>
+		<string>21</string>
 		<key>NAME</key>
 		<string>CaptureOne</string>
 		<key>LANGUAGE</key>
 		<string>International</string>
 		<key>CODESIGNATUREVERIFIERREQUIREMENT</key>
-		<string>identifier "com.captureone.captureone13" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "5WTDB5F65L"</string>
+		<string>anchor apple generic and identifier "com.captureone.captureone14" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "5WTDB5F65L")</string>
 		<key>DOWNLOADURLUUID</key>
-		<string>374dd05f-e8c7-499d-a703-9a7dca20d5b7</string>
+		<string>5059f2ea-b489-4f19-8e68-3b359e11d00a</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.9</string>
